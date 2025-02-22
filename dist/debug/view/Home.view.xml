@@ -1,0 +1,48 @@
+<View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:core="sap.ui.core"
+          controllerName="SAPUI5-DemoApp.controller.Home">
+
+
+  <VBox class="sapUiSmallMargin" justifyContent="Center" alignItems="Center" height="100%" style="padding: 1rem;">
+
+    <Panel class="sapUiSmallMargin">
+      <HBox alignItems="Center">
+      
+        <Text text="SAP UI5 Demo App" class="sapUiLargeText" />
+      </HBox>
+    </Panel>
+
+
+	   <Text text="To-Do List" class="sapUiLargeMarginBottom sapUiTextBold sapUiLargeText" />
+
+    <HBox class="sapUiSmallMarginBottom" alignItems="Center" justifyContent="SpaceBetween" width="31%">
+      <Input id="newTaskInput" placeholder="Enter new task" width="250%" class="sapUiSmallMarginEnd" />
+      <Button text="Add Task" press="onAddTask" type="Emphasized" width="100%" class="addBtton"/>
+    </HBox>
+
+    <List id="taskList" items="{/tasks}" class="sapUiSmallMarginTop" width="100%">
+      <CustomListItem>
+        <HBox justifyContent="SpaceBetween" alignItems="Center" class="taskItemContainer">
+          <Text text="{task}" width="100%" class="taskText" />
+
+          <HBox>
+            <Button text="Edit" press="onEditTask" type="Emphasized" class="sapUiSmallMarginEnd" width="100%">
+              <customData>
+                <core:CustomData key="taskId" value="{id}" />
+              </customData>
+            </Button>
+            <Button text="Delete" press="onDeleteTask" type="Reject" class="sapDeleteButton">
+              <customData>
+                <core:CustomData key="taskId" value="{id}" />
+              </customData>
+            </Button>
+          </HBox>
+        </HBox>
+      </CustomListItem>
+    </List>
+
+    <Button text="Save Task" press="onSaveTask" visible="false" id="saveTaskBtn" type="Emphasized" width="100%" class="sapUiSmallMarginTop" />
+  </VBox>
+
+</View>

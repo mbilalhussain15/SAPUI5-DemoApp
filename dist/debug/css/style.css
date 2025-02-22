@@ -1,0 +1,86 @@
+
+#taskList {
+    background-color: #f8f8f8; 
+    border-radius: 8px;     
+    padding: 16px;
+  width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+  .sapUiLargeText {
+    font-size: 2rem;
+  }
+  
+  .sapUiTextBold {
+    font-weight: bold;
+  }
+  
+  .sapUiSmallMarginTop {
+    margin-top: 16px;
+  }
+  
+  .sapUiSmallMarginBottom {
+    margin-bottom: 16px;
+  }
+  
+  .sapUiSmallMarginEnd {
+    margin-right: 8px;
+  }
+  .sapDeleteButton
+  {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+ 
+  .taskText {
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding-right: 20px;  
+  }
+  
+
+  .sapUiEmphasized {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sapUiReject {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .sapUiEmphasized:hover {
+    background-color: #0056b3;
+  }
+  
+  .sapUiReject:hover {
+    background-color: #c82333;
+  }
+
+  #saveTaskBtn {
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  #saveTaskBtn:hover {
+    background-color: #218838;
+  }
+  .addBtton{
+    margin-left: 10px;
+  }

@@ -1,0 +1,175 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "SAPUI5-DemoApp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "SAPUI5-DemoApp.view.App",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.f": {}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "SAPUI5-DemoApp.view",
+				"controlAggregation": "pages",
+				"controlId": "appRootControl",
+				"clearControlAggregation": false,
+				"viewLevel": 3,
+				"bypassed": {
+					"target": []
+				}
+			},
+			"routes": [{
+				"name": "home",
+				"pattern": "",
+				"target": ["home"]
+			}, {
+				"name": "page1",
+				"pattern": "page1",
+				"target": ["page1"]
+			}, {
+				"name": "page2",
+				"pattern": "page2",
+				"target": ["page2"]
+			}, {
+				"name": "carousel",
+				"pattern": "carousel",
+				"target": ["carousel"]
+			}, {
+				"name": "userform",
+				"pattern": "userform",
+				"target": ["userform"]
+			}, {
+				"name": "appconfig",
+				"pattern": "appconfig",
+				"target": ["appconfig"]
+			}],
+			"targets": {
+				"home": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Home",
+					"viewLevel": 1,
+					"controlId": "appRootControl"
+				},
+				"carousel": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Carousel",
+					"viewLevel": 2,
+					"controlId": "appRootControl"
+				},
+				"userform": {
+					"viewType": "XML",
+					"viewName": "UserForm",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewLevel": 3,
+					"controlId": "appRootControl"
+				},
+				"appconfig": {
+					"viewType": "XML",
+					"viewName": "AppConfig",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewLevel": 4,
+					"controlId": "appRootControl"
+				},
+				"page1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "View1",
+					"viewLevel": 5,
+					"controlId": "appRootControl"
+				},
+				"page2": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "View2",
+					"viewLevel": 6,
+					"controlId": "appRootControl"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "SAPUI5-DemoApp.i18n.i18n"
+				}
+			},
+			"userData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/UserData.json"
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true
+			} 
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}
