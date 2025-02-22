@@ -45,4 +45,5 @@ Before you begin, ensure that you have the following installed on your machine:
    ```
    This will launch the app, and you can view it in your browser at http://localhost:8080.
 
-![Capture01](https://github.com/user-attachments/assets/55011d50-bd17-4e4e-aed4-ea93b449bf30)
+![Capture01](https://github.com/user-attachments/assets/f7a964bd-a630-40f9-b869-44c241d3036c)
+
